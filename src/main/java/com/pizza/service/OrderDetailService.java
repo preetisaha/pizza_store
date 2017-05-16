@@ -31,4 +31,13 @@ public class OrderDetailService {
 			orderDetailDao.saveTopping(order_no, topping_id);
 		}
 	}
+	
+	public int getNewOrderCount(){
+		int newOrderCount = orderDetailDao.getNewOrderCount();
+		return newOrderCount;
+	}
+	
+	public OrderDetailDomain pullOrder(int eid){
+		return orderDetailDao.pullOrder(eid);
+	}
 }

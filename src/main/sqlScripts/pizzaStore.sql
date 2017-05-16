@@ -158,3 +158,16 @@ INSERT INTO `pizza_store`.`toppings`
 VALUES
 ('spinach', 1, '../images/spinach.jpg');
 
+INSERT INTO `pizza_store`.`employee_login`
+(`name`,
+`last_name`,
+`address`,
+`email`,
+`password`)
+VALUES
+(
+'tina',
+'tuna',
+'67 subway',
+'t@t',
+'qwe');
