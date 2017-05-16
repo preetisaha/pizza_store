@@ -16,7 +16,7 @@ public class OrderDetailDao {
 	private JdbcTemplate jdbcTemplate;
 
 	public OrderDetailDomain saveOrderDetail(int uid, int pizza_price) {
-		jdbcTemplate.update("insert into order_detail (uid, pizza_price) values (?, ?)",
+		jdbcTemplate.update("insert into order_detail (uid, pizza_price, status) values (?, ?, 0)",
 				new Object[] { uid, pizza_price });
 		return jdbcTemplate.queryForObject("select * from order_detail where order_no = (select last_insert_id())",
 				new OrderDetailMapper());

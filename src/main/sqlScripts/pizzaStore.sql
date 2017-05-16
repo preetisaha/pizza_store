@@ -34,17 +34,15 @@ CREATE TABLE `pizza_store`.`toppings` (
   PRIMARY KEY (`id`));
 
 CREATE TABLE `pizza_store`.`order_detail` (
-  `order_no` INT NOT NULL AUTO_INCREMENT,
-  `uid` INT NOT NULL,
-  `topping` VARCHAR(45) NOT NULL,
-  `pizza_price` INT NOT NULL,
+  `order_no` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL,
+  `pizza_price` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `eid` int(11) DEFAULT NULL,
   PRIMARY KEY (`order_no`),
-  INDEX `user_id_idx` (`uid` ASC),
-  CONSTRAINT `user_id`
-    FOREIGN KEY (`uid`)
-    REFERENCES `pizza_store`.`user_login` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `user_id_idx` (`uid`),
+  CONSTRAINT `user_id` FOREIGN KEY (`uid`) REFERENCES `pizza_store`.`user_login` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
 
 CREATE TABLE `pizza_store`.`order_topping` (
   `order_id` INT NOT NULL,
@@ -159,5 +157,4 @@ INSERT INTO `pizza_store`.`toppings`
 `image`)
 VALUES
 ('spinach', 1, '../images/spinach.jpg');
-
 

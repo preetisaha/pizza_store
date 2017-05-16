@@ -12,8 +12,10 @@ public class OrderDetailMapper implements RowMapper<OrderDetailDomain>{
 		int order_no = rs.getInt("order_no");
 		int uid = rs.getInt("uid");
 		int pizza_price = rs.getInt("pizza_price");
+		int status = rs.getInt("status");
+		int eid = rs.getInt("eid");
 		
-		OrderDetailDomain orderDetailDomain = new OrderDetailDomain(order_no, uid, pizza_price);
+		OrderDetailDomain orderDetailDomain = new OrderDetailDomain(order_no, uid, pizza_price, status, eid);
 		
 		return orderDetailDomain;
 	}

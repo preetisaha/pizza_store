@@ -23,20 +23,12 @@ public class OrderDetailController {
 	public int getOrderNo(@RequestBody OrderRequest orderRequest) {
 		int pizza_price = orderRequest.getPizza_price();
 		
-		System.out.println("pizza price - " + pizza_price);
-		
 		int uid = orderRequest.getUid();
-		
-		System.out.println("uid - " + uid);
 		
 		OrderDetailDomain odd = orderDetailService.saveOrderDetail(uid, pizza_price);
 		int order_no = odd.getOrder_no();
 		
-		System.out.println("order_no - " + order_no);
-		
 		List<Integer> toppingList = orderRequest.getToppingIdList();
-		
-		System.out.println("toppingList - " + toppingList);
 		
 		orderDetailService.saveTopping(order_no, toppingList);
 		
