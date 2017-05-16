@@ -1,0 +1,31 @@
+@media (max-width: 50px) {
+    .portfolio>.clear:nth-child(6n)::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+}
+@media (min-width: 50px) and (max-width: 50px) {
+    .portfolio>.clear:nth-child(8n)::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+}
+@media (min-width: 50px) {
+    .portfolio>.clear:nth-child(12n)::before {  
+      content: '';
+      display: table;
+      clear: both;
+    }
+}
+
+.disabled{
+  opacity: 0.5;
+  pointer-events: none;
+
+  > * {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

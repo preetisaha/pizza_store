@@ -103,7 +103,7 @@ gulp.task('copy-i18n', function () {
             .pipe(gulp.dest('dist/i18n/'));
 });
 
-gulp.task('copy', ['copy-fonts', 'copy-images', 'copy-i18n', 'copy-js-libs', 'copy-scripts', 'copy-views', 'copy-css'], function () {});
+gulp.task('copy', ['copy-fonts', 'copy-images', 'copy-i18n', 'copy-js-libs', 'copy-scripts', 'copy-views', 'copy-css', 'copy-images'], function () {});
 
 //gulp.task('less', function () {
 //  return gulp.src(['bower_components/bootstrap/less/bootstrap.less', 'bower_components/font-awesome/less/font-awesome.less'])
