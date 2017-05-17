@@ -6,4 +6,7 @@ var app = angular.module('myApp')
         this.selectedTopping = [];
         this.pizza;
         this.order_no;
+        this.employee_id = null;
+        this.employee_name = null;
+        this.employee_email = null;
     });

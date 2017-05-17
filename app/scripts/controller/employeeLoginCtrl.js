@@ -5,9 +5,9 @@ app.controller('employeeLoginCtrl', ['$scope','$routeParams','$http','$location'
 			$scope.employeelogin = function() {
 
 				function loginSuccess(response) {
-					$scope.name = response.data.name;
-					$scope.email = response.data.email;
-					$scope.employee_id = response.data.employee_id;
+					dataService.employee_name = response.data.name;
+					dataService.employee_email = response.data.email;
+					dataService.employee_id = response.data.employee_id;
 					
 					$location.path("pullJob");
 				}

@@ -28,8 +28,7 @@
     "angular-translate-interpolation-messageformat": "~2.8.1",
     "angular-translate-loader-url": "~2.8.1",
     "angular-translate-loader-static-files": "~2.8.1",
-    "sockjs-client": "~0.3",
-    "ng-stomp"
+    "sockjs-client": "~0.3"
   },
   "overrides": {
     "bootstrap": {
