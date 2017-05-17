@@ -13,7 +13,7 @@ import com.pizza.service.UserLoginService;
 
 
 @RestController
-public class HomeController {
+public class UserLoginController {
 	
 	@Autowired
 	UserLoginService userLoginService;
