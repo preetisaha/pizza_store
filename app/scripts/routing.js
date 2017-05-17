@@ -24,4 +24,14 @@ app.config(function($routeProvider) {
     	templateUrl : "views/trackOrder.html",
         controller : "trackOrderCtrl"
     })
+    
+    .when ("/employeeLogin",{
+    	templateUrl : "views/employeeLogin.html",
+        controller : "employeeLoginCtrl"
+    })
+    
+    .when ("/pullJob",{
+    	templateUrl : "views/pullJob.html",
+        controller : "pullJobCtrl"
+    })
 });

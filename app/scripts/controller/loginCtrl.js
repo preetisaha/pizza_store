@@ -22,5 +22,9 @@ app.controller('loginCtrl', [ '$scope', '$routeParams', '$http', '$location', 'd
 				
 				$http.post("login", data).then(success, failure);
 			}
+			
+			$scope.employeeLogin = function() {
+				$location.path("employeeLogin");
+			}
 
 		} ]);
