@@ -11,7 +11,7 @@ import com.pizza.domain.OrderDetailDomain;
 import com.pizza.mapper.OrderDetailMapper;
 
 @Repository
-public class OrderDetailDao {
+public class OrderDao {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -34,11 +34,15 @@ public class OrderDetailDao {
 	
 	@Transactional
 	public OrderDetailDomain pullOrder(int eid){
-		OrderDetailDomain odd = jdbcTemplate.queryForObject("select * from order_detail order by order_no asc limit 1 for update", new OrderDetailMapper());
+		OrderDetailDomain odd = jdbcTemplate.queryForObject("select * from order_detail where status = 0 order by order_no asc limit 1 for update", new OrderDetailMapper());
 		int order_no = odd.getOrder_no();
 		
 		jdbcTemplate.update("update order_detail set status = 1, eid = ? where order_no = ?", new Object[]{eid, order_no});
 		
 		return jdbcTemplate.queryForObject("SELECT * FROM order_detail where order_no = ?", new Object[]{order_no}, new OrderDetailMapper());
+	}
+	
+	public void updateOrder(int orderNumber, int orderStatus) {
+		jdbcTemplate.update("update order_detail set status = ? where order_no = ?", new Object[]{orderStatus, orderNumber});
 	}
 }

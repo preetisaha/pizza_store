@@ -34,4 +34,9 @@ app.config(function($routeProvider) {
     	templateUrl : "views/pullJob.html",
         controller : "pullJobCtrl"
     })
+    
+    .when ("/executeOrder",{
+    	templateUrl : "views/executeOrder.html",
+        controller : "executeOrderCtrl"
+    })
 });

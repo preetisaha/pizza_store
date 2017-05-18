@@ -12,13 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pizza.domain.OrderDetailDomain;
 import com.pizza.dto.request.OrderRequest;
-import com.pizza.service.OrderDetailService;
+import com.pizza.dto.request.OrderUpdateRequest;
+import com.pizza.service.OrderService;
 
 @RestController
-public class OrderDetailController {
+public class OrderController {
 
 	@Autowired
-	OrderDetailService orderDetailService;
+	OrderService orderService;
 
 	@RequestMapping(value = "/order", method = RequestMethod.POST)
 	public int getOrderNo(@RequestBody OrderRequest orderRequest) {
@@ -26,17 +27,22 @@ public class OrderDetailController {
 		
 		int uid = orderRequest.getUid();
 		
-		OrderDetailDomain odd = orderDetailService.saveOrderDetail(uid, pizza_price);
+		OrderDetailDomain odd = orderService.saveOrderDetail(uid, pizza_price);
 		int order_no = odd.getOrder_no();
 		
 		List<Integer> toppingList = orderRequest.getToppingIdList();
-		orderDetailService.saveTopping(order_no, toppingList);
+		orderService.saveTopping(order_no, toppingList);
 		return order_no;
 
 	}
 	
 	@RequestMapping(value = "/pullOrder/{eid}", method = RequestMethod.GET)
 	public OrderDetailDomain pullOrder(@PathVariable int eid){
-		return orderDetailService.pullOrder(eid);
+		return orderService.pullOrder(eid);
+	}
+	
+	@RequestMapping(value = "/orderUpdate", method = RequestMethod.PUT)
+	public void updateOrderStatus(@RequestBody OrderUpdateRequest our) {
+		orderService.updateOrder(our.getUserId(), our.getOrderNumber(), our.getOrderStatus());
 	}
 }

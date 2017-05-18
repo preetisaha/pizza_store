@@ -9,4 +9,5 @@ var app = angular.module('myApp')
         this.employee_id = null;
         this.employee_name = null;
         this.employee_email = null;
+        this.employeePulledOrder = null;
     });
