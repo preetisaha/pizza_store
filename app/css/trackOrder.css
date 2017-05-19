@@ -62,7 +62,7 @@ body {
 span.line {
     height: 5px;
     width: 90px;
-    background-color:#F5998E;
+    /*background-color:#F5998E;*/
     display: block;
     position: absolute;
     top: 28%;
@@ -75,12 +75,20 @@ span.line {
 	float:left;
 	margin-left:5%;
 }
-.confirm .imgcircle , .process .imgcircle, .quality .imgcircle {
+
+.done{
 	background-color:#98D091;
 }
-.confirm span.line, .process span.line {
-	background-color:#98D091;
+
+.notDone{
+	background-color:F5998E;
 }
+/*.confirm .imgcircle , .process .imgcircle, .quality .imgcircle {
+	background-color:#98D091;
+}*/
+/*.confirm span.line, .process span.line {
+	background-color:#98D091;
+}*/
 .content3 p {
 	margin-left:-50%;
 	font-size:15px;
@@ -90,7 +98,7 @@ span.line {
 	height:75px;
 	width:75px;
 	border-radius:50%;
-	background-color:#F5998E;
+	/*background-color:#F5998E;*/
 	position:relative;
 }
 .imgcircle img {

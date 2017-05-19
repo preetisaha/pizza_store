@@ -17,7 +17,7 @@ app.controller('makePaymentCtrl', [ '$scope', '$routeParams', '$http',
 
 			$scope.pay = function() {
 				function orderNoSuccess(response) {
-					dataService.order_no = response.data.order_no;
+					dataService.order_no = response.data;
 					$location.path("trackOrder");
 				}
 
