@@ -1,6 +1,16 @@
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 
 
+<div class="row">
+	<div class="col-md-12">
+		<div ng-hide="demoMsg"  class="alert alert-warning" role="alert">
+		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		  <span class="sr-only">NOTE:</span>
+		  For demo purpose use User-Name: <strong style="color: red;">t@t</strong> and Password: <strong style="color: red;">qwe</strong>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 	<div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6">
 		<div class="panel panel-success">
@@ -55,3 +65,16 @@
 		</div>
 	</div>
 </div>
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		<div ng-hide="loginAlertMessage"  class="alert alert-danger" role="alert">
+		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		  <span class="sr-only">Error:</span>
+		  Enter a valid credential
+		</div>
+	</div>
+</div>
+

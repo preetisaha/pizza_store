@@ -1,6 +1,11 @@
 var app = angular.module('myApp');
-app.controller('pullJobCtrl', ['$scope','$routeParams','$http','$location','dataService',
-		function($scope, $routeParams, $http, $location, dataService) {
+app.controller('pullJobCtrl', ['$scope','$routeParams','$http','$location','dataService', '$timeout',
+		function($scope, $routeParams, $http, $location, dataService, $timeout) {
+
+			$scope.loginAlertMessage = true;
+			$scope.demoMsg = false;
+			$timeout(function () { $scope.demoMsg = true; }, 4000);
+	
 			$scope.newOrder = 0;
 			
 			var socket = new SockJS('/gs-guide-websocket');
@@ -23,7 +28,8 @@ app.controller('pullJobCtrl', ['$scope','$routeParams','$http','$location','data
 				}
 				
 				function pullJobError(response) {
-					alert("error");
+					$scope.loginAlertMessage = false;
+					$timeout(function () { $scope.loginAlertMessage = true; }, 3000);
 				}
 				
 				$http.get("pullOrder/" + dataService.employee_id).then(pullJobSuccess, pullJobError);
