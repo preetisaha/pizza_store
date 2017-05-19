@@ -1,7 +1,10 @@
 var app = angular.module('myApp');
-app.controller('loginCtrl', [ '$scope', '$routeParams', '$http', '$location', 'dataService',
-		function($scope, $routeParams, $http, $location, dataService) {
-	
+app.controller('loginCtrl', [ '$scope', '$routeParams', '$http', '$location', 'dataService', '$timeout',
+		function($scope, $routeParams, $http, $location, dataService, $timeout) {
+			$scope.loginAlertMessage = true;
+			$scope.demoMsg = false;
+			$timeout(function () { $scope.demoMsg = true; }, 4000);
+			
 			$scope.login = function() {
 				
 				function success(response) {
@@ -12,7 +15,8 @@ app.controller('loginCtrl', [ '$scope', '$routeParams', '$http', '$location', 'd
 				}
 				
 				function failure (response) {
-					alert("hello");
+					$scope.loginAlertMessage = false;
+					$timeout(function () { $scope.loginAlertMessage = true; }, 3000);
 				}
 				
 				var data = {
