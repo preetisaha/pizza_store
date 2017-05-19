@@ -17,6 +17,7 @@
 <script src="scripts/controller/executeOrderCtrl.js"></script>
 <script src="scripts/routing.js"></script>
 
+<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,7 +31,92 @@
 
 <body>
  
+ <!-- Header -->
+ <header>
+	 	
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <div class="footer-distributed" style="padding: 0px 0px !important; margin-top: 25px !important">
+				<div class="footer-left">
+					<h3>Hot&nbsp;<span>Pizza</span></h3>
+				</div>
+			  </div>	
+		    </div>
+		  </div>
+		</nav>	 	
+	
+</header>
+ 
+ <!-- Content -->
  <div ng-view></div>
+ 
+ <!-- Footer -->
+ <div class="row">
+ 	<div class="col-md-12">
+ 	
+ 	<footer class="footer-distributed" style="margin-top: 22px !important">
+
+			<div class="footer-left">
+
+				<h3>Hot&nbsp;<span>Pizza</span></h3>
+
+				<p class="footer-links">
+					<a href>Home</a>
+					·
+					<a href>Blog</a>
+					·
+					<a href>About</a>
+					·
+					<a href>Faq</a>
+					·
+					<a href>Contact</a>
+				</p>
+
+				<p class="footer-company-name">Hot Pizza &copy; 2017</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>21 Revolution Street</span> Minneapolis, MN</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@hot.pizza.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We are a Hot Pizza delivery service.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+ 	
+ 	</div>
+ </div>
  
 </body>
 </html>

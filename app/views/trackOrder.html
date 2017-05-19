@@ -1,7 +1,4 @@
 <link rel="stylesheet" href="../css/trackOrder.css" >
-	<div class="header">
-		<h1>Shipment Track</h1>
-	</div>
 
 	<div class="content">
 		<div class="content1">
@@ -13,46 +10,42 @@
 					Order Number : <span>{{order_no}}</span>
 				</p>
 			</div>
-			<div class="content2-header1">
-				<p>
-					Status : <span>Checking Quality</span>
-				</p>
-			</div>
+			
 			
 			<div class="clear"></div>
 		</div>
 		<div class="content3">
 			<div class="shipment">
 				<div class="confirm">
-					<div class="imgcircle done">
+					<div class="imgcircle" ng-class="confirmClr">
 						<img src="images/confirm.png" alt="confirm order">
 					</div>
-					<span class="line"></span>
+					<span class="line" ng-class="confirmClr"></span>
 					<p>Confirmed Order</p>
 				</div>
 				<div class="process">
-					<div class="imgcircle">
+					<div class="imgcircle" ng-class="processClr">
 						<img src="images/process.png" alt="process order">
 					</div>
-					<span class="line"></span>
+					<span class="line" ng-class="processClr"></span>
 					<p>Processing Order</p>
 				</div>
 				<div class="quality">
-					<div class="imgcircle">
+					<div class="imgcircle" ng-class="qualityClr">
 						<img src="images/quality.png" alt="quality check">
 					</div>
-					<span class="line"></span>
+					<span class="line" ng-class="qualityClr"></span>
 					<p>Quality Check</p>
 				</div>
 				<div class="dispatch">
-					<div class="imgcircle">
+					<div class="imgcircle" ng-class="dispatchClr">
 						<img src="images/dispatch.png" alt="dispatch product">
 					</div>
-					<span class="line"></span>
+					<span class="line" ng-class="dispatchClr"></span>
 					<p>Dispatched Item</p>
 				</div>
 				<div class="delivery">
-					<div class="imgcircle">
+					<div class="imgcircle" ng-class="deliveryClr">
 						<img src="images/delivery.png" alt="delivery">
 					</div>
 					<p>Product Delivered</p>
