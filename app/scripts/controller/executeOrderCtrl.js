@@ -35,6 +35,7 @@ app.controller('executeOrderCtrl', ['$scope','$routeParams','$http','$location',
 					} else if (orderSts == 5) {
 						$scope.dlButtonColor = "success";
 						$scope.dlDisabled = true;
+						$location.path("pullJob");
 					}
 					
 					if(!$scope.$$phase) {

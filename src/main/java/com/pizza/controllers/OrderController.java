@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pizza.domain.OrderDetailDomain;
 import com.pizza.dto.request.OrderRequest;
 import com.pizza.dto.request.OrderUpdateRequest;
+import com.pizza.exceptions.ResourceNotFoundException;
 import com.pizza.service.OrderService;
 
 @RestController
@@ -38,7 +39,13 @@ public class OrderController {
 	
 	@RequestMapping(value = "/pullOrder/{eid}", method = RequestMethod.GET)
 	public OrderDetailDomain pullOrder(@PathVariable int eid){
-		return orderService.pullOrder(eid);
+		OrderDetailDomain odd =  orderService.pullOrder(eid);
+		if (odd != null){
+			return odd;
+		}
+		else {
+			throw new ResourceNotFoundException();
+		}
 	}
 	
 	@RequestMapping(value = "/orderUpdate", method = RequestMethod.PUT)
@@ -46,3 +53,4 @@ public class OrderController {
 		orderService.updateOrder(our.getUserId(), our.getOrderNumber(), our.getOrderStatus());
 	}
 }
+

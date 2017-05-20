@@ -1,6 +1,7 @@
 package com.pizza.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +15,6 @@ public class UserLoginDao {
 	private JdbcTemplate jdbcTemplate;
 	
 	public UserLoginDomain getLoginInfo(String email) {
-		return jdbcTemplate.queryForObject("SELECT * FROM user_login WHERE email = ?", new Object[]{email}, new UserLoginMapper());
+		return DataAccessUtils.singleResult(jdbcTemplate.query("SELECT * FROM user_login WHERE email = ?", new Object[]{email}, new UserLoginMapper()));
 	}
 }
