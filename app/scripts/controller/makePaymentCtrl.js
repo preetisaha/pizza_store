@@ -1,7 +1,11 @@
 var app = angular.module('myApp');
 app.controller('makePaymentCtrl', [ '$scope', '$routeParams', '$http',
-		'$location', 'dataService',
-		function($scope, $routeParams, $http, $location, dataService) {
+		'$location', 'dataService','$timeout',
+		function($scope, $routeParams, $http, $location, dataService, $timeout) {
+			
+			$scope.note = false;
+			$timeout(function () { $scope.note = true; },8000);
+			
 			$scope.toppingLst = dataService.selectedTopping;
 			
 			$scope.toppingIdList = [];

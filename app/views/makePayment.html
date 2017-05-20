@@ -1,6 +1,17 @@
 <link rel="stylesheet" href="../css/topping.css">
 <link rel="stylesheet" href="../css/makePayment.css">
 
+
+<div class="row">
+	<div class="col-md-12">
+		<div ng-hide="note"  class="alert alert-success" role="alert">
+		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		  <span class="sr-only">NOTE:</span>
+		  This is for demo purpose, hence no need to provide credit card informations!
+		</div>
+	</div>
+</div>
+
 <div class="row">
 	<div class="form-group col-lg-12"></div>
 </div>
@@ -22,11 +33,11 @@
 						<h3 class="panel-title">Payment Details</h3>
 					</div>
 					<div class="panel-body">
-						<form role="form">
+						<form name="ccForm" role="form">
 							<div class="form-group">
 								<label for="cardNumber"> CARD NUMBER</label>
 								<div class="input-group">
-									<input type="text" class="form-control" id="cardNumber"
+									<input name="ccNumber" type="text" class="form-control" id="cardNumber"
 										placeholder="Valid Card Number" required autofocus /> <span
 										class="input-group-addon"><span
 										class="glyphicon glyphicon-lock"></span></span>
@@ -83,8 +94,6 @@
 									</div>
 								</div>
 								-->
-								
-								
 							</div>
 						</form>
 					</div>
