@@ -23,8 +23,10 @@ Technologies used:
 		<td><img src="./demo_images/angular_js.png" width="50" height="50"/></td>
 		<td><img src="./demo_images/aws.png" width="50" height="50"/></td>
 		<td><img src="./demo_images/bootstrap.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/java.png" width="50" height="50"/></td>
+		<td><img src="./demo_images/java.jpg" width="50" height="50"/></td>
 		<td><img src="./demo_images/restful_api.jpg" width="50" height="50"/></td>
+	</tr>
+	<tr>
 		<td><img src="./demo_images/websockets.png" width="50" height="50"/></td>
 		<td><img src="./demo_images/mysql.png" width="50" height="50"/></td>
 		<td><img src="./demo_images/npm.png" width="50" height="50"/></td>
