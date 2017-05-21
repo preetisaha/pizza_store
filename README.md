@@ -40,5 +40,16 @@ This application has the following employee facing functionalities:
 <strong><u>Work-Flow:</u></strong>
 
 <ul>
-	<li>Shopping cart: An overview of the pizza shopping functionality<br><img src="./demo_images/shopping_cart.png"/></li>
+	<li>Shopping cart: An overview of the pizza shopping functionality. We can add/remove multiple toppings as well as we can select pizza size<br><img src="./demo_images/shopping_cart.png"/></li>
+	<li>Checkout: An overview of the checkout functionality using CC<br><img src="./demo_images/checkout.png"/></li>
+	<li>Customer Order Tracking: An overview of real time order tracking by customers<br><img src="./demo_images/order_track.png"/></li>
+	<li>Employee Order Pulling: An overview of real time order pulling by an employee<br><img src="./demo_images/emp_order_pull.png"/></li>
+	<li>Employee Order Servicing: An overview of real time order servicing by an employee and simultaneous order tracking by customer<br>
+		<table>
+			<tr>
+				<td><img src="./demo_images/emp_order_service.png"/></td>
+				<td><img src="./demo_images/cust_order_track.png"/></td>
+			</tr>
+		</table>
+	</li>
 </ul>
