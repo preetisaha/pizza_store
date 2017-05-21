@@ -19,20 +19,20 @@ This application has the following employee facing functionalities:
 Technologies used:
 <table>
 	<tr>
-		<td><img src="./demo_images/spring-boot.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/angular_js.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/aws.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/bootstrap.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/java.jpg" width="50" height="50"/></td>
-		<td><img src="./demo_images/restful_api.jpg" width="50" height="50"/></td>
+		<td><img src="./demo_images/spring-boot.png" width="100" height="30"/></td>
+		<td><img src="./demo_images/angular_js.png" width="100" height="30"/></td>
+		<td><img src="./demo_images/aws.png" width="100" height="30"/></td>
+		<td><img src="./demo_images/bootstrap.png" width="60" height="50"/></td>
+		<td><img src="./demo_images/java.jpg" width="100" height="50"/></td>
+		<td><img src="./demo_images/restful_api.jpg" width="100" height="30"/></td>
 	</tr>
 	<tr>
-		<td><img src="./demo_images/websockets.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/mysql.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/npm.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/maven.png" width="50" height="50"/></td>
+		<td><img src="./demo_images/websockets.png" width="100" height="50"/></td>
+		<td><img src="./demo_images/mysql.png" width="100" height="40"/></td>
+		<td><img src="./demo_images/npm.png" width="100" height="30"/></td>
+		<td><img src="./demo_images/maven.png" width="100" height="30"/></td>
 		<td><img src="./demo_images/html.png" width="50" height="50"/></td>
 		<td><img src="./demo_images/bower-logo.png" width="50" height="50"/></td>
-		<td><img src="./demo_images/gulp.png" width="50" height="50"/></td>
+		<td><img src="./demo_images/gulp.png" width="30" height="50"/></td>
 	</tr>
 </table>
