@@ -16,7 +16,7 @@ This application has the following employee facing functionalities:
 	<li>Order Servicing: Lets an employees to pull one order at a time and service that order across multiple stages while providing real time updates to the customer</li>
 </ul>
 
-Technologies used:
+<strong><u>Technologies used:</u></strong>
 <table>
 	<tr>
 		<td><img src="./demo_images/spring-boot.png" width="100" height="30"/></td>
@@ -36,3 +36,9 @@ Technologies used:
 		<td><img src="./demo_images/gulp.png" width="30" height="50"/></td>
 	</tr>
 </table>
+
+<strong><u>Work-Flow:</u></strong>
+
+<ul>
+	<li>Shopping cart: An overview of the pizza shopping functionality<br><img src="./demo_images/shopping_cart.png"/></li>
+</ul>
