@@ -6,7 +6,7 @@ This is an Online Pizza Store application. This application has the following cu
 	<li>Log-In: Lets a customer to log into his account</li>
 	<li>Shopping Cart: Lets a customer to select a pizza type with different toppings</li>
 	<li>Checkout: Lets a customer to checkout using a CC</li>
-	<li>Order Tracking (Real-Time): Lets a customer to track his order real-time as the pizza preparation and delivery process proceeds</li>
+	<li>Order Tracking (Real-Time): Lets a customer to track his order real-time (using websockets and stomp) as the pizza preparation and delivery process proceeds</li>
 </ul>
 
 This application has the following employee facing functionalities:
@@ -47,7 +47,17 @@ This application has the following employee facing functionalities:
 	<li>Employee Order Servicing: An overview of real time order servicing by an employee and simultaneous order tracking by customer<br>
 		<table>
 			<tr>
+				<th>Employee view</th>
+			</tr>
+			<tr>
 				<td><img src="./demo_images/emp_order_service.png"/></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<th>Customer view</th>
+			</tr>
+			<tr>
 				<td><img src="./demo_images/cust_order_track.png"/></td>
 			</tr>
 		</table>
