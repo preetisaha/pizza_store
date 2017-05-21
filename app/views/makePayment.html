@@ -13,6 +13,17 @@
 </div>
 
 <div class="row">
+	<div class="col-md-12">
+		<div ng-hide="ccError"  class="alert alert-info" role="alert">
+		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		  <span class="sr-only">ERROR:</span>
+		  <div style="color: red;">Invalid Credit Card details</div>
+		  This is for demo purpose, hence we will neglect the following errors and proceed
+		</div>
+	</div>
+</div>
+
+<div class="row">
 	<div class="form-group col-lg-12"></div>
 </div>
 <div class="row">
@@ -37,11 +48,13 @@
 							<div class="form-group">
 								<label for="cardNumber"> CARD NUMBER</label>
 								<div class="input-group">
-									<input name="ccNumber" type="text" class="form-control" id="cardNumber"
+									<input name="ccNumber" type="text" cc-number cc-eager-type name="ccNumber" ng-model="card.number"
+									class="form-control" id="cardNumber"
 										placeholder="Valid Card Number" required autofocus /> <span
 										class="input-group-addon"><span
 										class="glyphicon glyphicon-lock"></span></span>
 								</div>
+
 							</div>
 							<div class="row">
 								
@@ -50,7 +63,7 @@
 									<div class="form-group">
 										<label for="expityMonth"> EXPIRY DATE</label>
 										<div class="pl-ziro">
-											<input type="text" class="form-control" id="expityMonth"
+											<input type="text" class="form-control" id="expityMonth" cc-exp-month name="ccExpMonth" ng-model="card.expiration.month"
 												placeholder="MM" required />
 										</div>		 
 									</div>
@@ -60,7 +73,7 @@
 									<div class="form-group">
 										<label for="cvCode"></label> 
 										<div class="pl-ziro">
-											<input style="margin-top: 5px;" type="text" class="form-control" id="expityYear"
+											<input style="margin-top: 5px;" type="text" class="form-control" id="expityYear" cc-exp-year name="ccExpYear" ng-model="card.expiration.year"
 												placeholder="YY" required />
 										</div>
 									</div>
@@ -103,7 +116,7 @@
 					<a><span class="badge pull-right"><span
 								class="glyphicon glyphicon-usd"></span>{{price + pizza.price + 2}}</span> Final Payment</a></li>
 				</ul>
-				<br /> <a ng-click="pay()" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+				<br /> <a ng-click="pay(ccForm.ccNumber.$valid)" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
 			<!--  </div>-->
 		</div>
 
