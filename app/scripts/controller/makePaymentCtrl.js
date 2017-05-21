@@ -4,6 +4,7 @@ app.controller('makePaymentCtrl', [ '$scope', '$routeParams', '$http',
 		function($scope, $routeParams, $http, $location, dataService, $timeout) {
 			
 			$scope.note = false;
+			$scope.ccError = true;
 			$timeout(function () { $scope.note = true; },8000);
 			
 			$scope.toppingLst = dataService.selectedTopping;
@@ -19,23 +20,35 @@ app.controller('makePaymentCtrl', [ '$scope', '$routeParams', '$http',
 
 			$scope.pizza = dataService.pizza;
 
-			$scope.pay = function() {
-				function orderNoSuccess(response) {
-					dataService.order_no = response.data;
-					$location.path("trackOrder");
-				}
-
-				function orderNoFailure(response) {
-					alert("error");
+			$scope.pay = function(validCCNumber) {
+				if (!validCCNumber) {
+					$scope.ccError = false;
+					$timeout(function () { $scope.ccError = true; },2000);
 				}
 				
-				var data = {
-						uid: dataService.user_id,
-						pizza_price: dataService.pizza.price,
-						toppingIdList: $scope.toppingIdList
-				}
+				$timeout(
+					function () { 
+						
+						function orderNoSuccess(response) {
+							dataService.order_no = response.data;
+							$location.path("trackOrder");
+						}
 
-				$http.post("order", data).then(orderNoSuccess, orderNoFailure);
+						function orderNoFailure(response) {
+							alert("error");
+						}
+						
+						var data = {
+								uid: dataService.user_id,
+								pizza_price: dataService.pizza.price,
+								toppingIdList: $scope.toppingIdList
+						}
+						
+						$http.post("order", data).then(orderNoSuccess, orderNoFailure);
+						
+					}
+					,2000
+				);
 				
 			}
 		} ]);
